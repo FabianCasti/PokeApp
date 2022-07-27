@@ -1,0 +1,463 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+}
+
+:root {
+  --red--color: #0c090a;
+}
+
+/*card ------------------------------------------*/
+.card {
+  width: 180px;
+  height: 130px;
+  margin: 0 auto;
+  padding: 15px;
+  box-shadow: 2px 2px 8px rgba(121, 115, 115, 0.3);
+  border-radius: 8px;
+  backdrop-filter: blur(1000px);
+  background-color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+  font-size: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #d8d8d8;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.card h1 {
+  text-shadow: 2px 2px rgb(3, 2, 2);
+}
+
+.card img {
+  height: 60%;
+  width: 50%;
+  animation-name: grow;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.card ul {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+span {
+  font-weight: normal;
+  color: black;
+}
+
+.card button {
+  background-color: #d90429;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  font-size: 10px;
+  width: 100%;
+  height: 15%;
+  margin-bottom: 10px;
+}
+
+.card button:hover {
+  background-color: white;
+  color: #d90429;
+  border: 1px solid #d90429;
+  border-radius: 10px;
+}
+
+/*log in--------------------------------------*/
+.logIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Merriweather Sans", sans-serif;
+  color: rgb(20, 20, 12);
+  -webkit-text-stroke: 0.7px rgb(34, 44, 48);
+}
+
+.logIn form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logIn > img {
+  height: 60vh;
+}
+
+.logIn input {
+  border: transparent;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px gray;
+  margin: 0px 0px 10px 0px;
+  width: 200px;
+  height: 20px;
+  text-align: center;
+}
+
+.logIn > form > button {
+  background-color: rgb(8, 218, 255);
+  color: white;
+  -webkit-text-stroke: 0px white;
+  border: transparent;
+  border-radius: 20px;
+  padding: 5px 10px 5px 10px;
+}
+
+.logIn button:hover {
+  color: chartreuse;
+  background-color: white;
+  border: 1px solid chartreuse;
+  cursor: pointer;
+}
+
+.pokeDex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokeDex > .buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 15px;
+}
+
+.pokeDex > .buttons > button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  background-color: #030303;
+}
+
+.pokeDex > .buttons > button:focus {
+  background-color: white;
+  border: 1px solid #d90429;
+  color: #d90429;
+}
+
+.pokeDex > .buttons > button:hover {
+  background-color: white;
+  border: 1px solid #d90429;
+  color: #d90429;
+  cursor: pointer;
+}
+
+.pokeDex > .pokemons {
+  margin-left: 6vw;
+  margin-right: 6vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Pokedex-------------------------------*/
+.pokeDex {
+  color: var(--red--color);
+}
+
+.pokeDex > .welcome > h1 {
+  margin: 20px 0px 20px 0px;
+  text-shadow: 2px 2px gray;
+  font-size: 40px;
+}
+
+.pokeDex > .welcome > h2 {
+  margin: 20px 0px 20px 0px;
+  font-size: 20px;
+}
+
+.pokeDex > .filter {
+  margin: 10px 0px 20px 0px;
+}
+
+.pokeDex > .filter select {
+  background-color: var(--red--color);
+  color: white;
+  -webkit-text-stroke: 0px white;
+  border: transparent;
+  border-radius: 0px 20px 20px 0px;
+  padding: 5px 10px 5px 10px;
+  box-shadow: 2px 2px 10px gray;
+}
+
+.pokeDex > .filter input {
+  border: transparent;
+  border-radius: 20px 0px 0px 20px;
+  box-shadow: 2px 2px 10px gray;
+  margin: 0px 0px 10px 10px;
+  width: 200px;
+  height: 25px;
+}
+
+/*Details --------------------------------------------*/
+.details {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 24px 48px;
+  box-sizing: border-box;
+}
+
+.details > .detail {
+  position: relative;
+  float: left;
+  width: calc(75% - 12px);
+  margin-right: 12px;
+}
+
+.details > .detail > .PokemonLogo {
+  position: relative;
+  float: left;
+  width: 60%;
+  margin-right: 40%;
+}
+
+.details > .detail > .PokemonLogo > img {
+  width: 100%;
+}
+
+.details > .detail > .main {
+  position: relative;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  border-radius: 16px;
+  margin: 24px 0px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.details > .detail > .main > img {
+  width: 35%;
+  height: 60%;
+  animation-name: grow;
+  animation-duration: 1500ms;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.details > .detail > .main > ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 10px;
+  margin-top: 48px;
+}
+
+.details > .detail > .type {
+  position: relative;
+  float: left;
+  background-color: white;
+  width: calc(50% - 8px);
+  margin-right: 8px;
+  text-align: center;
+  border-radius: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.details > .detail > .type b {
+  color: #d90429;
+}
+
+.details > .detail > .type > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin-top: 8px;
+}
+
+.details > .detail > .type li {
+  border-radius: 8px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.details > .detail > .abilities {
+  position: relative;
+  float: left;
+  text-align: center;
+  background-color: white;
+  width: calc(50% - 8px);
+  margin-left: 8px;
+  border-radius: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.details > .detail > .abilities b {
+  color: #d90429;
+}
+
+.details > .detail > .abilities > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin-top: 8px;
+}
+
+.details > .detail > .abilities li {
+  border-radius: 8px;
+  padding: 8px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 4px gray;
+}
+
+.details > .detail > .stateBase {
+  position: relative;
+  float: left;
+  background-color: white;
+  width: 100%;
+  border-radius: 16px;
+  margin-top: 24px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.details > .detail > .stateBase b {
+  position: relative;
+  float: left;
+  width: 100%;
+  text-align: center;
+  color: #d90429;
+  margin-bottom: 16px;
+}
+
+.details > .detail > .stateBase > .ProgressBar {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 24px;
+  overflow: hidden;
+  background-color: lightgray;
+  border-radius: 8px;
+  padding: 0rem 8px;
+  box-sizing: border-box;
+}
+
+
+.details > .detail > .stateBase > .ProgressBar + .ProgressBar {
+  margin-top: 16px;
+}
+
+.details > .detail > .stateBase > .ProgressBar > .ProgressLabel {
+  position: absolute;
+  height: 16px;
+  line-height: 16px;
+  top: 4px;
+  left: 8px;
+  font-weight: bold;
+  z-index: 2;
+  font-size: 14px;
+}
+
+.details > .detail > .stateBase > .ProgressBar > .ProgressComponent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: aquamarine;
+  z-index: 1;
+}
+
+.details > .detail > .stateBase > ul {
+  margin-left: 20px;
+  text-align: left;
+  list-style-type: none;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.25);
+  }
+}
+
+.details > .movements {
+  position: relative;
+  float: left;
+  width: calc(25% - 12px);
+  margin-left: 12px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.details > .movements > .pokeball {
+  position: relative;
+  width: 100%;
+  margin-bottom: 24px;
+  float: left;
+  opacity: 0.6;
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.details > .movements > b {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.details > .movements > ul {
+  position: relative;
+  float: left;
+  width: 100%;
+  list-style-type: none;
+  text-align: center;
+  background-color: white;
+  border-radius: 16px;
+  padding: 8px 0px;
+  box-sizing: border-box;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#particles-js {
+  background-color: #d90429;
+  width: 300px;
+  height: 300px;
+}
